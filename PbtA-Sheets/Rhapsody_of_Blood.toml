@@ -1,0 +1,203 @@
+# Sheets: Founder, Bloodline, Exporer
+
+# Configure Rolls
+rollFormula = "2d6"
+
+# Define roll result ranges.
+[rollResults]
+  [rollResults.failure]
+    range = "6-"
+    label = "Set Back!"
+  [rollResults.partial]
+    range = "7-9"
+    label = "Mixed Success."
+  [rollResults.success]
+    range = "10+"
+    label = "Full Success!"
+
+######################################
+## Exporers ##########################
+######################################
+# Define the Exporer (Character) group.
+[character]
+# TODO 
+# Context [Refuge, Drive, Breach]
+# History
+
+    # Define stats.
+    [character.stats]
+        iron = "Iron"
+        glass = "Glass"
+        sulpher = "Sulpher"
+        mercury = "Mercury"
+
+    # Define attributes.
+    [character.attributesTop]
+ 
+        [character.attributesTop.harm]
+            type = "Clock"
+            label = "Harm"
+            max = 5
+            default = 0
+    
+        [character.attributesTop.contamination]
+            type = "Clock"
+            label = "Contamination"
+            max = 3
+            default = 0
+
+        [character.attributesTop.blood]
+            type = "Number"
+            label = "Blood"
+            default = 0
+
+    # Define sidebar details.
+    [character.attributesLeft]
+
+        [character.attributesLeft.looks]
+            type = "LongText"
+            label = "Looks"
+
+        [character.attributesLeft.wounds]
+            type = "ListMany"
+            label = "Wounds"
+            description = ""
+            options = [
+                "Minor Wound",
+                "Major Wound",
+                "Deadly Wound"
+            ]
+
+        [character.attributesLeft.bloodadv]
+            type = "ListMany"
+            label = "Blood Advances"
+            description = "Each may only be taken once."
+            options = [
+                "Get +1 to a stat (max 3)",
+                "Get +1 to a stat (max 3)",
+                "Get a Blood Gift",
+                "Get a Blood Gift"
+            ]
+
+    # Define groups for moves.
+    [character.moveTypes]
+        playbook = "Playbook Moves"
+        blood = "Blood Gifts"
+        exploration = "Exploration Moves"
+        confrontation = "Confrontation Moves"
+        covenants = "Covenant Moves"
+        bloodline = "Bloodline Moves"
+
+    # Define groups for equipment.
+    [character.equipmentTypes]
+        gear = "Gear"
+        covenants = "Covenants"
+
+######################################
+## Founders ##########################
+######################################
+# Define the Founder group.
+[founder]
+    baseType = 'character'
+    # TODO 
+# Context [Refuge, Drive, Breach]
+# History
+
+    # Define stats.
+    [founder.stats]
+        iron = "Iron"
+        glass = "Glass"
+        sulpher = "Sulpher"
+        mercury = "Mercury"
+
+    # Define attributes.
+    [founder.attributesTop]
+ 
+        [founder.attributesTop.harm]
+            type = "Clock"
+            label = "Harm"
+            max = 5
+            default = 0
+    
+        [founder.attributesTop.contamination]
+            type = "Clock"
+            label = "Contamination"
+            max = 3
+            default = 0
+
+        [founder.attributesTop.blood]
+            type = "Number"
+            label = "Blood"
+            default = 0
+
+    # Define sidebar details.
+    [founder.attributesLeft]
+
+        [founder.attributesLeft.looks]
+            type = "LongText"
+            label = "Looks"
+
+        [founder.attributesLeft.History]
+            type = "LongText"
+            label = "History"
+
+    # Define groups for moves.
+    [founder.moveTypes]
+        # playbook = "Playbook Moves"
+        # blood = "Blood Gifts"
+        exploration = "Exploration Moves"
+        confrontation = "Confrontation Moves"
+        covenants = "Covenant Moves"
+        bloodline = "Bloodline Moves"
+
+    # Define groups for equipment.
+    [founder.equipmentTypes]
+        weapons = "Weapons"
+
+######################################
+## Bloodlines ########################
+######################################
+# Define the Bloodline group.
+[bloodline]
+    baseType = 'character'
+
+    #TODO 
+    # Traditions [Style, Lore, Name]
+
+    
+    # Define stats.
+    [bloodline.stats]
+        chalices = "Chalices"
+        swords = "Swords"
+        relics = "Relics"
+        wands = "Wands"
+        coins = "Coins"
+
+# Moves
+# Bloodline
+# The passing of Generations
+
+######################################
+## NPCS ##############################
+######################################
+[npc]
+    # Define attributes.
+    [npc.attributesTop]
+        [npc.attributesTop.harm]
+            type = "Number"
+            label = "Harm"
+        [npc.attributesTop.type]
+            type = "Text"
+            label = "Type"
+
+    [npc.attributesLeft]
+        [npc.attributesLeft.description]
+            type = "LongText"
+            label = "Description"
+        [npc.attributesLeft.drive]
+            type = "LongText"
+            label = "Drive"
+
+        # Define logical groups for moves.
+        [npc.moveTypes]
+            mc = "GM Moves"
