@@ -20,8 +20,7 @@ rollFormula = "2d6"
 ######################################
 # Define the Exporer (Character) group.
 [character]
-# TODO 
-# Context [Refuge, Drive, Breach]
+# TODO add Context [Refuge, Drive, Breach] & Looks to Descritpion tab
 
     # Define stats.
     [character.stats]
@@ -32,47 +31,34 @@ rollFormula = "2d6"
 
     # Define attributes.
     [character.attributesTop]
-
-        [character.attributesTop.looks]
-            type = "LongText"
-            label = "Looks"
  
         [character.attributesTop.harm]
             type = "Clock"
             label = "Harm"
-            description = "Choose to take 1 wound instead of 1 harm."
+            description = "Choose to take 1 wound instead of 1 harm"
             max = 5
             default = 0
-    
+        
         [character.attributesTop.contamination]
             type = "Clock"
             label = "Contamination"
-            description = "When the 3rd is marked: raise Blood & clear contamination."
+            description = "When all are marked raise Blood & clear Contamination"
             max = 3
             default = 0
 
         [character.attributesTop.blood]
             type = "Number"
             label = "Blood"
-            description = "When Blood increases, take a blood advance,"
+            description = "When Blood increases, take a blood advance"
             default = 0
 
     # Define sidebar details.
     [character.attributesLeft]
-        
-        [character.attributesLeft.armor]
-            type = "ListMany"
-            label = "Armor"
-			description = ""
-            options = [
-                "Frist Armor",
-                "Second Armor"
-            ]
 
         [character.attributesLeft.wounds]
             type = "ListMany"
             label = "Wounds"
-            description = "Choose to take 1 wound instead of 1 harm."
+            description = "Take 1 wound instead of 1 harm."
             options = [
                 "Minor Wound",
                 "Major Wound",
@@ -82,12 +68,10 @@ rollFormula = "2d6"
         [character.attributesLeft.bloodadv]
             type = "ListMany"
             label = "Blood Advances"
-            description = "Each may only be taken once."
+            description = ""
             options = [
-                "Get +1 to a stat (max 3)",
-                "Get +1 to a stat (max 3)",
-                "Get a Blood Gift",
-                "Get a Blood Gift"
+                "Get +1 to a stat (max 3)|2",
+                "Get a Blood Gift|2"
             ]
 
     # Define groups for moves.
@@ -101,6 +85,7 @@ rollFormula = "2d6"
 
     # Define groups for equipment.
     [character.equipmentTypes]
+        armor = "Armor"
         gear = "Gear"
         covenants = "Covenants"
 
@@ -109,9 +94,8 @@ rollFormula = "2d6"
 ######################################
 # Define the Founder group.
 [founder]
-    baseType = 'character'
-    # TODO 
-# Context [Refuge, Drive, Breach]
+# TODO add Context [Refuge, Drive, Breach] & Looks to Descritpion tab
+    baseType = 'character' 
 
     # Define stats.
     [founder.stats]
@@ -121,40 +105,29 @@ rollFormula = "2d6"
         mercury = "Mercury"
 
     # Define attributes.
-    [founder.attributesTop]
- 
-        [founder.attributesTop.harm]
+    # [founder.attributesTop]
+
+    # Define sidebar details.
+    [founder.attributesLeft]
+        [founder.attributesLeft.harm]
             type = "Clock"
             label = "Harm"
             max = 5
             default = 0
     
-        [founder.attributesTop.contamination]
+        [founder.attributesLeft.contamination]
             type = "Clock"
             label = "Contamination"
             max = 3
             default = 0
 
-        [founder.attributesTop.blood]
+        [founder.attributesLeft.blood]
             type = "Number"
             label = "Blood"
             default = 0
 
-    # Define sidebar details.
-    [founder.attributesLeft]
-
-        [founder.attributesLeft.looks]
-            type = "LongText"
-            label = "Looks"
-
-        [founder.attributesLeft.History]
-            type = "LongText"
-            label = "History"
-
     # Define groups for moves.
     [founder.moveTypes]
-        # playbook = "Playbook Moves"
-        # blood = "Blood Gifts"
         exploration = "Exploration Moves"
         confrontation = "Confrontation Moves"
         covenants = "Covenant Moves"
@@ -170,11 +143,19 @@ rollFormula = "2d6"
 # Define the Bloodline group.
 [bloodline]
     baseType = 'character'
+    
+    # Define attributes.
+    # [bloodline.attributesTop]
 
-    #TODO 
-    # Traditions [Style, Lore, Name]
-    # Pacts
-
+    # Define sidebar details.
+    [bloodline.attributesLeft]
+        [bloodline.attributesLeft.style]
+            type = "LongText"
+            label = "Style"
+        
+        [bloodline.attributesLeft.lore]
+            type = "LongText"
+            label = "Lore"
     
     # Define stats.
     [bloodline.stats]
@@ -184,13 +165,13 @@ rollFormula = "2d6"
         wands = "Wands"
         coins = "Coins"
 
-# Moves
-# Bloodline
-# The passing of Generations
-
     # Define groups for moves.
     [bloodline.moveTypes]
         bloodline = "Bloodline Moves"
+
+    # Define groups for equipment.
+    [bloodline.equipmentTypes]
+        pacts = "Pacts"
 
 ######################################
 ## NPCS ##############################
