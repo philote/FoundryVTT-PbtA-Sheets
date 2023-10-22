@@ -22,7 +22,6 @@ rollFormula = "2d6"
 [character]
 # TODO 
 # Context [Refuge, Drive, Breach]
-# History
 
     # Define stats.
     [character.stats]
@@ -33,6 +32,10 @@ rollFormula = "2d6"
 
     # Define attributes.
     [character.attributesTop]
+
+        [character.attributesTop.looks]
+            type = "LongText"
+            label = "Looks"
  
         [character.attributesTop.harm]
             type = "Clock"
@@ -53,10 +56,6 @@ rollFormula = "2d6"
             label = "Blood"
             description = "When Blood increases, take a blood advance,"
             default = 0
-        
-        [character.attributesTop.looks]
-            type = "LongText"
-            label = "Looks"
 
     # Define sidebar details.
     [character.attributesLeft]
@@ -113,7 +112,6 @@ rollFormula = "2d6"
     baseType = 'character'
     # TODO 
 # Context [Refuge, Drive, Breach]
-# History
 
     # Define stats.
     [founder.stats]
@@ -175,6 +173,7 @@ rollFormula = "2d6"
 
     #TODO 
     # Traditions [Style, Lore, Name]
+    # Pacts
 
     
     # Define stats.
