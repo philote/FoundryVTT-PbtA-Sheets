@@ -26,7 +26,7 @@ rollFormula = "2d6"
     [character.stats]
         iron = "Iron"
         glass = "Glass"
-        sulpher = "Sulpher"
+        sulphur = "Sulphur"
         mercury = "Mercury"
 
     # Define attributes.
@@ -65,7 +65,7 @@ rollFormula = "2d6"
                 "Deadly Wound"
             ]
 
-        [character.attributesLeft.bloodadv]
+        [character.attributesLeft.bloodAdv]
             type = "ListMany"
             label = "Blood Advances"
             description = ""
@@ -101,7 +101,7 @@ rollFormula = "2d6"
     [founder.stats]
         iron = "Iron"
         glass = "Glass"
-        sulpher = "Sulpher"
+        sulphur = "Sulphur"
         mercury = "Mercury"
 
     # Define attributes.
@@ -118,6 +118,7 @@ rollFormula = "2d6"
         [founder.attributesLeft.contamination]
             type = "Clock"
             label = "Contamination"
+            description = "When all are marked raise Blood & clear Contamination"
             max = 3
             default = 0
 
@@ -144,6 +145,14 @@ rollFormula = "2d6"
 [bloodline]
     baseType = 'character'
     
+    # Define stats.
+    [bloodline.stats]
+        chalices = "Chalices"
+        swords = "Swords"
+        relics = "Relics"
+        wands = "Wands"
+        coins = "Coins"
+
     # Define attributes.
     # [bloodline.attributesTop]
 
@@ -156,44 +165,36 @@ rollFormula = "2d6"
         [bloodline.attributesLeft.lore]
             type = "LongText"
             label = "Lore"
-    
-    # Define stats.
-    [bloodline.stats]
-        chalices = "Chalices"
-        swords = "Swords"
-        relics = "Relics"
-        wands = "Wands"
-        coins = "Coins"
 
     # Define groups for moves.
     [bloodline.moveTypes]
         bloodline = "Bloodline Moves"
+        generations = "The Passing of Generations"
 
     # Define groups for equipment.
     [bloodline.equipmentTypes]
         pacts = "Pacts"
 
 ######################################
-## NPCS ##############################
+## NPCS: Minions #####################
 ######################################
 [npc]
     # Define attributes.
-    [npc.attributesTop]
-        [npc.attributesTop.harm]
-            type = "Number"
-            label = "Harm"
-        [npc.attributesTop.type]
-            type = "Text"
-            label = "Type"
+    # [npc.attributesTop]
 
     [npc.attributesLeft]
+
+        [npc.attributesLeft.type]
+            type = "ListMany"
+            label = "Type"
+            options = [
+                "Minion",
+                "Significant Foe"
+            ]
         [npc.attributesLeft.description]
             type = "LongText"
             label = "Description"
-        [npc.attributesLeft.drive]
-            type = "LongText"
-            label = "Drive"
 
         # Define logical groups for moves.
         [npc.moveTypes]
-            mc = "GM Moves"
+            reactions = "Reactions"
