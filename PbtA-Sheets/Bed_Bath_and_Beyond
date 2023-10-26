@@ -1,0 +1,96 @@
+# Configure Rolls
+rollFormula = "2d6"
+
+# Define roll result ranges.
+[rollResults]
+  [rollResults.crit]
+    range = "12+"
+    label = "Critical Success!"
+  [rollResults.success]
+    range = "10-11"
+    label = "Success!"
+  [rollResults.partial]
+    range = "7-9"
+    label = "Partial success"
+  [rollResults.failure]
+    range = "6-"
+    label = "Miss..."
+
+########################################
+## CHARACTERS ##########################
+########################################
+# Define the character group.
+[character]
+
+  # Define stats.
+  [character.stats]
+    vitality = "Vitality"
+    composure = "Composure"
+    reason = "Reason"
+    presence = "Presence"
+    sensitivity = "Sensitivity"
+
+  # Define attributes.
+  [character.attributesTop]
+    [character.attributesTop.style]
+        type = "LongText"
+        label = "Style"
+        description = "Pick one or make up your own."
+    [character.attributesTop.conditions]
+        type = "LongText"
+        label = "Conditions"
+    [character.attributesTop.irritant]
+        type = "LongText"
+        label = "Irritant"
+
+  # Define sidebar details.
+  [character.attributesLeft]
+    
+    [character.attributesLeft.maskoflove]
+        type = "ListMany"
+        label = "Mask of Love"
+        description = "When you put on this mask, mark and narrate any Mask you wish. You may not choose a Mask that has already been marked by yourself or your partner."
+        options = [
+            "Love At First Sight. Put on this mask and narrate the moment you knew your partner was the one.",
+            "An Open Book. Put on this mask and recall a time you were 100% honest with your partner, even though it was embarrassing.",
+            "Strength in Numbers. Put on this mask and narrate a time when things were hard, but you overcame together."
+        ]
+    [character.attributesLeft.maskofmystery]
+        type = "ListMany"
+        label = "Mask of Mystery"
+        description = "When you put on this mask, mark the first empty box."
+        options = [
+            "Do Not Adjust Your Set. When you mark this mask, narrate a time you were watching Unmasked Mysteries when the TV started acting weird. Describe how this sparked a lifelong obsession with the supernatural. Your Reason is reduced by 1, and your Sensitivity is increased by 1.",
+            "They Know Something Is Up. When you mark this mask, describe what rumours a competitor is spreading about your B&B. What is the kernel of truth behind them? Your Composure is reduced by 1, and you gain the condition Paranoid.",
+            "Together or Not At All. Make the ultimate sacrifice. When your partner is in danger, mark this mask to sacrifice yourself to Room 3. Your partner is saved and gets +2 to their next Theorize roll. Then, narrate your experience of Room 3. (When Together or Not At All has been marked, move immediately to the Theorize move.)"
+        ]
+    
+    
+  # Define groups for moves.
+  [character.moveTypes]
+    basic = "Basic Moves"
+    individual = "Individual Moves"
+
+  # Define groups for equipment.
+  # [character.equipmentTypes]
+    
+
+########################################
+## NPCS ################################
+########################################
+# Define stats.
+[npc]      
+  [npc.attributesLeft]
+    [npc.attributesLeft.details]
+      type = "LongText"
+      label = "Descriptive Details"
+    [npc.attributesLeft.personality]
+      type = "LongText"
+      label = "Personality or Role"
+    [npc.attributesLeft.quote]
+      type = "LongText"
+      label = "Inspiring Quote"
+
+  # Define logical groups for moves.
+  [npc.moveTypes]
+    custom = "Moves"
