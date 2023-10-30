@@ -47,7 +47,7 @@ rollFormula = "2d6"
 ########################################
 # Define the character group.
 [barbarian]
-
+baseType = "character"
     # Define stats.
     [barbarian.stats]
         insatiable = "Insatiable"
@@ -77,7 +77,7 @@ rollFormula = "2d6"
         gear = "Gear"
 
 [earthling]
-
+baseType = "character"
     # Define stats.
     [earthling.stats]
         heroism = "Heroism"
@@ -102,7 +102,7 @@ rollFormula = "2d6"
         gear = "Gear"
 
 [engine]
-
+baseType = "character"
     # Define stats.
     [engine.stats]
         destruction = "Destruction"
@@ -150,7 +150,7 @@ rollFormula = "2d6"
         gear = "Gear"
 
 [mutant]
-
+baseType = "character"
     # Define stats.
     [mutant.stats]
         human = "Human"
@@ -180,7 +180,7 @@ rollFormula = "2d6"
         gear = "Gear"
 
 [princess]
-
+baseType = "character"
     # Define stats.
     [princess.stats]
         brave = "Brave"
@@ -220,7 +220,7 @@ rollFormula = "2d6"
         gear = "Gear"
 
 [ranger]
-
+baseType = "character"
     # Define stats.
     [ranger.stats]
         popular = "Popular"
@@ -245,7 +245,7 @@ rollFormula = "2d6"
         gear = "Gear"
 
 [wizard]
-
+baseType = "character"
     # Define stats.
     [wizard.stats]
         nomagic = "No Magic"
@@ -280,7 +280,7 @@ rollFormula = "2d6"
         gear = "Gear"
 
 [technician]
-
+baseType = "character"
     # Define stats.
     [technician.stats]
         heroism = "Heroism"
@@ -315,7 +315,7 @@ rollFormula = "2d6"
         gear = "Gear"
 
 [thief]
-
+baseType = "character"
     # Define stats.
     [thief.stats]
         charming = "Charming"
